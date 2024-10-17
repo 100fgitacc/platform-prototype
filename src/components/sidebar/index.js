@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Sidebar = ({renderPage}) => {
+    const isExploreCourse = useSelector((state) => state.explore.setExploreCourse);
 
     const [activePage, setActivePage] = useState('Profile');
     const handleMenuItemClick = (e) => {
@@ -14,7 +16,7 @@ const Sidebar = ({renderPage}) => {
         navigate('/');
     }
     return(
-        <div className={styles.sidebar}>
+        <div className={`${styles.sidebar} ${isExploreCourse? styles.hide : ''}`}>
            <Link to='/' className={`${styles.logo} main-logo`}>
                 <img src='../assets/img/logo.png' alt='logo'/>
             </Link>

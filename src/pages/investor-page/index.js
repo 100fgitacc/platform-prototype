@@ -8,19 +8,19 @@ import Blog from 'components/blog';
 
 const InvestorPage = () => {
 
-    const [state, setState] = useState();
+    const [currPage, setCurrPage] = useState('Profile');
 
     const handleRenderPage = (page) => {
-        setState(page);
+        setCurrPage(page);
     }
     const handleRenderContent = () => {
-        switch (state) {
+        switch (currPage) {
             case 'Profile':
-                return <Profile/>;
-            case 'Blog':
-                return <Blog/>;
+                return <Profile currPage={currPage}/>;
+            // case 'Blog':
+            //     return <Blog currPage={currPage}/>;
             default:
-                return <Profile/>;
+                return <Profile currPage={currPage}/>;
         }
     }
     return(

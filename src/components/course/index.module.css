@@ -1,0 +1,35 @@
+.title{
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.overview-wrapper{
+    padding: 25px;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.overview-inner{
+    margin-bottom: 35px;
+}
+.overview-inner:last-child{
+    margin-bottom: 0;
+}
+
+.overview-heading{
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.overview-item{
+    margin-bottom: 5px;
+    padding: 15px 40px 15px 25px;
+    background-color: #F1F5F9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.overview-item:last-child{
+    margin-bottom: 0;
+}
+.overview-item-title{
+    font-size: 16px;
+}
+
