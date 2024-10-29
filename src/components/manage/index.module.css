@@ -1,0 +1,157 @@
+.content-wrapper{
+    max-width: 975px;
+    padding: 25px;
+    border:  1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.settings.content-wrapper,
+.details.content-wrapper{
+    max-width: 660px;
+}
+.settings.content-wrapper{
+    margin-bottom: 15px;
+}
+.content-wrapper p {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.details .content-elem{
+    max-width: 384px;
+}
+.details .content-elem:first-child,
+.settings .content-elem:first-child{
+    margin-bottom: 15px;
+}
+.textarea{
+    resize: none;
+    width: 100%;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    min-height: 70px;
+    padding: 8px 12px;
+}
+
+.upload-btn, .save-changes-btn{
+    margin-top: 15px;
+}
+.upload-btn::before{
+    background-image: url('/public/assets/img/icons/plus-circle.png');
+}
+.radio-title{
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+.content-wrapper .title{
+    font-weight: 400;
+}
+.content-wrapper:not(:first-child) .title{
+    margin-bottom: 25px;
+}
+.options-desc{
+    margin-top: 12px;
+    margin-bottom: 25px;
+}
+
+.options-desc-item{
+    position: relative;
+    padding-left: 25px;
+}
+.options-desc-item::before{
+    content: '•';
+    position: absolute;
+    left: 8px;
+    top: -3px;
+    font-size: 18px;
+}
+.content-wrapper:not(:nth-child(2)) label{
+    font-size: inherit;
+    font-weight: inherit;
+}
+.note{
+    margin-bottom: 15px !important; 
+}
+
+
+
+
+.charts-container{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.charts-item{
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.charts-item .participate-title{
+    text-align: left;
+}
+.charts-item:nth-child(1){
+    margin-right: 10px;
+    padding-bottom: 45px;
+}
+.charts-item:nth-child(1) .participate-title{
+    margin-bottom: 95px;
+}
+.item-wrapper .charts-item:nth-child(1) .participate-title:first-of-type{
+    margin-bottom: 25px;
+}
+.item-wrapper .charts-item:nth-child(1) .participate-title:last-of-type{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.item-wrapper .charts-item:nth-child(1){
+    margin-right: 0px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+.item-wrapper{
+    margin-right: 10px;
+}
+.last-item{
+    max-width: 390px;
+    padding: 65px 25px 55px 50px;
+}
+
+
+.content-wrapper.dashboards{
+    margin-bottom: 15px;
+}
+.content-wrapper.dashboards > div:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-wrapper.dashboards > div:first-child p{
+    font-weight: 500;
+    cursor: pointer;
+    color:#073FC2
+}
+.dashboards .participate-title{
+    margin-bottom: 25px;
+    line-height: 100%;
+}
+.audience .participate-title{
+    line-height: 100%;
+}
+.content-wrapper.audience > div{
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 500;
+    cursor: pointer;
+    color:#073FC2
+}
+.content-wrapper.audience > div p{
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+.audience .doughnut{
+    width: 300px;
+    height: 300px;
+}
+.activity-btn{
+    margin-top: 30px;
+}

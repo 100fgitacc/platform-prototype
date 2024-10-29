@@ -141,21 +141,29 @@ button, input, optgroup, select, textarea {
 
 .content{
   margin-left: 228px;
+  transition: all 0.3s ease;
   flex: 1 1;
 }
+.content.full-width{
+  margin-left: 65px;
+}
 .content-inner{
-  margin-top: 25px;
+  margin-top: 95px;
   margin-left: 25px;
   margin-right: 25px;
+}
+.content-inner.full-width{
+  margin-left: 90px;
 }
 .secondary-title{
     font-size: 22px;
 }
 .third-title{
-    font-size: 16px;
+    font-size: 18px;
 }
 .button-success,
 .button-primary{
+  display: inline-block;
   padding: 12px 15px;
   padding-left: 40px;
   font-size: 14px;
@@ -207,29 +215,100 @@ button, input, optgroup, select, textarea {
   max-width: 265px;
   border-radius: 15px;
 }
+.create-post-popup-inner{
+  max-width: 875px;
+  width: 100%;
+  border-radius: 15px;
+}
+.activity-popup-inner{
+  max-width: 655px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+iframe{
+  width: 100%;
+}
 
 
-.fade-enter {
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 18px;
+}
+.radio {
+  position: absolute;
   opacity: 0;
-  transition: opacity 300ms ease;
-}
-.fade-enter-active {
-  opacity: 1;
-}
-.fade-exit {
-  opacity: 1;
-  transition: opacity 300ms ease;
-}
-.fade-exit-active {
-  opacity: 0;
+  cursor: pointer;
 }
 
+.custom-radio {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%; 
+  border: 1px solid #E2E8F0;
+  position: relative;
+  margin-right: 8px;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+  transform: translate( 37%, 37%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1858F3;
+  transition: all 0.3s ease;
+}
+
+.radio:checked + .custom-radio:after {
+  display: block;
+}
 
 
-
-
-
-
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px ;
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: inherit;
+}
+thead th {
+  background-color: #eaf3ff;
+  color: #3d5afe;
+  padding: 5px 10px;
+  text-align: left;
+  font-weight: 500;
+}
+tbody td {
+  background-color: #f7faff;
+  color: #000;
+  padding: 5px 10px;
+  text-align: left;
+}
+tbody tr:last-child td {
+  border-bottom: none;
+}
+tbody td:first-child ,
+thead th:first-child  {
+  border-bottom: none;
+  border-radius: 5px 0 0 5px;
+}
+tbody td:last-child,
+thead th:last-child {
+  border-radius: 0 5px 5px 0;
+  border-bottom: none;
+}
+tr{
+  border-radius: 10px;
+}
 
 .error-page-section{
   display: flex;
@@ -297,22 +376,88 @@ button, input, optgroup, select, textarea {
 section:first-child{
   margin-top: 0;
 }
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="number"]  {
   width: 100%;
-  padding: 10px;
-  padding-left: 17px;
+  padding: 8px 12px;
   border-radius: 5px;
-  border: none;
-  background: #2D2986;
-  color: #fff;
+  border: 1px solid #CBD5E1;
   font-family: inherit;
-  font-size: 14px;
-  font-weight: 100;
 }
-input::placeholder {
-  color: #fff;
-}
+input::placeholder,
 textarea::placeholder {
   color: #94A3B8;
+  font-weight: 300 !important;
+}
+label{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
 }
 
+/* Скрыть стандартный чекбокс */
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.custom-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border: 1px solid #E5E7EB;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.custom-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 4px;
+  height: 9px;
+  border-right: 2px solid #1858f3;
+  border-bottom: 2px solid #1858f3;
+}
+
+.custom-checkbox + label:hover::before {
+  border-color: #007bff;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 3px; 
+}
+
+/* Стили для "ползунка" (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #101f7e;
+  border-radius: 4px; 
+}
+
+/* Стили для области скроллбара */
+::-webkit-scrollbar-track {
+  background: #b6b6b6; 
+  border-radius: 4px;
+}
+
+/* При наведении мыши на ползунок */
+::-webkit-scrollbar-thumb:hover {
+  background: #101f7e; 
+}

@@ -1,25 +1,52 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSelector, useDispatch } from 'react-redux';
+import { resetExplore } from '../../store';
+import ProgressBar from 'components/progress-bar';
 
 const CourseOverview  = ({data}) => {
 
-        const [visibleItems, setVisibleItems] = useState({});
+    const isExploreCourse = useSelector((state) => state.explore.setExploreCourse);
+    const [visibleItems, setVisibleItems] = useState({});
 
-        const handleTextOpened = (elemIndex, index) =>{
-            
-            const key = `${elemIndex}-${index}`;
-            if (visibleItems[key]) {
-                setVisibleItems(prev => ({ ...prev, [key]: false }));
-            } else {
-                setVisibleItems(prev => ({ ...prev, [key]: true }));
-            }
+    const handleTextOpened = (elemIndex, index) =>{
+        
+        const key = `${elemIndex}-${index}`;
+        if (visibleItems[key]) {
+            setVisibleItems(prev => ({ ...prev, [key]: false }));
+        } else {
+            setVisibleItems(prev => ({ ...prev, [key]: true }));
         }
+    }
+    const dispatch = useDispatch();
 
+    const handleExploreClick = () => {
+        dispatch(resetExplore());
+        
+    };
+    
     return(
-        <div className={styles['overview-wrapper']}>
+        <div className={`${styles['overview-wrapper']} ${isExploreCourse && styles['single-course']}`}>
+            {isExploreCourse && (
+                        <>
+                            <button className={styles['back-to-button']} onClick={handleExploreClick}>Back to course</button>
+                            <div className={`${styles['header-image'] }`}>
+                                <h1 className={`${styles.title} main-title`}>{data.name}</h1>
+                            </div>
+                            <div className={styles['header-info']}>
+                                <div className={styles.desc}>
+                                    <ProgressBar progress={data.progress}/>
+                                </div>
+                                <div className={styles.activity}>
+                                    <img src='../assets/img/icons/timer.png' alt='timer icon'/>
+                                    <p>Last activity: 04.10.24</p>
+                                </div>
+                            </div>
+                        </>
+                    )}
             {data &&  (
-                data.map((item, elemIndex)=>(
+                data.overview.map((item, elemIndex)=>(
                     <div className={styles['overview-inner']} key={elemIndex}>  
                         <p className={styles['overview-heading']}>  
                             {item.heading}

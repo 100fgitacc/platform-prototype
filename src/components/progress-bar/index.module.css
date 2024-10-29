@@ -15,8 +15,17 @@
     background-color: #073FC2;
 }
 .progress-percentage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 5px;
     font-size: 13px;
     color: #A4A4A4;
     font-weight: 400;
+}
+.green .progress-bar-status{
+    background-color: #1EAB1E;
+}
+.total{
+    color: #1EAB1E;;
 }

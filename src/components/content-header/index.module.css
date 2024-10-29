@@ -31,6 +31,14 @@
 .course .header-image{
     background-image: url('/public/assets/img/course-img.png');
 }
+.feed .header-image{
+    background-image: url('/public/assets/img/feed-img.png');
+}
+.course-succesed .header-image{
+    position: relative;
+    padding: 100px 60px;
+    margin-top: 110px;
+}
 .header-info{
     position: relative;
     z-index: 3;
@@ -71,13 +79,37 @@
     align-items: flex-start;
 }
 .sub-info{
+    max-width: 335px;
     width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #787878;
+    color: #A4A4A4;
     font-weight: 400;
     margin-bottom: 5px;
+}
+.feed .sub-info{
+    max-width: unset;
+}
+.sub-info p{
+    position: relative;
+}
+.feed .sub-info p::before{
+    display: none;
+}
+.sub-info p::before{
+    content: '|';
+    position: absolute;
+    width: 2px;
+    right: -12px;
+    color: #ada4a4;
+    height: 100%;
+}
+.sub-info div p:last-child:before{
+    content: '';
+}
+.sub-info p:last-child:before{
+    left: -15px;
 }
 .title{
     margin-top: 5px;
@@ -117,7 +149,8 @@
 }
 .rate,
 .name,
-.activity{
+.activity,
+.socials{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,4 +214,37 @@
     width: 16px;
     height: 16px;
     margin-right: 7px;
+}
+.wrapper.course-succesed{
+    border: 0;
+    padding-bottom: 0;
+}
+
+.course-succesed .subtitle{
+    margin: 0;
+}
+.course-succesed .title{
+    margin-top: 10px;
+    margin: 0;
+}
+.feed .title{
+    margin-top: 15px;
+}
+.feed .header-info{
+    align-items: flex-start;
+}
+.feed .desc > div:last-child,
+.feed  .sub-info{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.feed .desc{
+    margin-top: 35px;
+}
+.feed .activity{
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+.socials img{
+    margin-left: 10px;
 }

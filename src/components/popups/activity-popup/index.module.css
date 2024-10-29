@@ -1,0 +1,110 @@
+.popup-wrapper{
+    margin: 0 auto;
+    max-width: 386px;
+    text-align: left;
+}
+.popup-wrapper.reset-wrapper{
+    max-width: unset;
+}
+.title{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.popup-item.airdrop{
+    padding: 50px 15px;
+    background-image: url('/public/assets/img/airdrop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 386px;
+    height:123px;
+    cursor: pointer;
+}
+.popup-item.investround{
+    padding: 50px 15px;
+    padding: 50px 15px;
+    background-image: url('/public/assets/img/investround.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 386px;
+    height:123px;
+    cursor: pointer;
+}
+.popup-item{
+    display: flex;
+    margin-bottom: 15px;
+    padding: 15px 25px;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.popup-item img{
+    width: 68px;
+    height: 68px;
+    margin-right: 15px;
+}
+.popup-item strong{
+    font-size: 18px;
+    color: #fff;
+}
+.input-wrapper{
+    font-size: 14px;
+    color: inherit;
+}
+.input-wrapper input{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.submit-btn{
+    margin-top: 20px;
+}
+.not-active{
+    opacity: 0.65;
+    background-color: #0F172A;
+}
+
+.popup-item.invest-window{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    padding: 20px;
+}
+.invest-window .title{
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+.invest-window > div{
+    display: flex;
+}
+
+.invest-window .input-wrapper{
+    margin-right: 25px;
+}
+.invest-window .input-wrapper:last-child{
+    margin-right: 0px;
+}
+.invest-window > div:nth-of-type(1) .input-wrapper:nth-child(1){
+    max-width: 100px;
+    width: 100%;
+}
+.invest-window > div:nth-of-type(1) .input-wrapper:nth-child(2){
+    max-width: 170px;
+    width: 100%;
+}
+.invest-window > div:nth-of-type(1) .input-wrapper:nth-child(3){
+    max-width: 280px;
+    width: 100%;
+}
+.invest-window > div:nth-of-type(2) .input-wrapper:nth-child(1){
+    max-width: 280px;
+    width: 100%;
+}
+.invest-window > div:nth-of-type(2) .input-wrapper:nth-child(2){
+    max-width: 280px;
+    width: 100%;
+}
+.invest-window p,
+.invest-window strong{
+    color: #0F172A;
+    font-size: 14px;
+}

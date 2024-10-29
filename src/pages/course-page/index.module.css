@@ -1,0 +1,22 @@
+.lesson-content{
+    margin-left: 35px;
+}
+.lesson-content-inner{
+    margin-top: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-lesson-wrapper{
+    margin: 0;
+}
+.lesson-content-inner > div:first-child{
+    width: 29%;
+}
+.lesson-content-inner > div:last-child{
+    width: 69%;
+}
+.lesson-content-inner-full{
+    margin-left: 185px;
+}

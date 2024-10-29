@@ -6,14 +6,13 @@ import ProfileContent from './ProfileContent';
 const Profile = ({currPage}) => {
 
     const [content, setContent] = useState('Account');
-
+  
     const handleSetContent = (e) => {
         setContent(e);
     }
-
     return (
         <>
-            <ContentHeader/>
+            <ContentHeader page={content}/>
             <PagePagination currPage={currPage} renderPageContent={handleSetContent}/>
             <ProfileContent content={content}/>
         </>

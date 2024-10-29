@@ -6,6 +6,9 @@ const exploreSlice = createSlice({
     name: 'explore',
     initialState: {
         setExploreCourse: false,
+        isSidebarHidden: false,
+        activeMenuItem: null,
+        isDashboard: false,
     },
     reducers: {
         setExplore: (state) => {
@@ -14,11 +17,23 @@ const exploreSlice = createSlice({
         resetExplore: (state) => {
             state.setExploreCourse = false;
         },
+        toggleSidebar: (state) => {
+            state.isSidebarHidden = !state.isSidebarHidden;
+        },
+        resetSidebar: (state) => {
+            state.isSidebarHidden = !state.isSidebarHidden;
+        },
+        setActiveMenuItem: (state, action) => {
+            state.activeMenuItem = action.payload; 
+        },
+        setIsDashboard: (state, action) => {
+            state.isDashboard = action.payload; 
+        },
     },
 });
 
 // Экспорт действий
-export const { setExplore, resetExplore } = exploreSlice.actions;
+export const { setExplore, resetExplore, toggleSidebar, resetSidebar, setActiveMenuItem,setIsDashboard } = exploreSlice.actions;
 
 // Настройка хранилища
 const store = configureStore({

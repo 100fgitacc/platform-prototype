@@ -1,0 +1,221 @@
+.content-container{
+    min-height: 600px;
+}
+.feed-content-wrapper{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.title{
+    margin-bottom: 20px;
+}
+.cards-container{
+    max-width: 790px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.feed-card{
+    width: 100%;
+    height: 155px;
+    position: relative;
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.airdrop-card{
+    margin-right: 15px;
+    background: linear-gradient(90deg, #073FC2 0%, #031E5C 100%);
+}
+.investround-card{
+    background: linear-gradient(90deg, #702DDB 0%, #3D1875 100%);
+}
+.status{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: #1EAB1E;
+}
+.card-info > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.investround-card .card-info > div:last-child{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+.name{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.create-post-btn{
+    margin-top: 50px;
+    margin-bottom: 35px;
+    margin-left: 0;
+}
+
+
+
+
+
+
+.airdrop .cards-container,
+.details .cards-container{
+    max-width: 405px;
+}
+
+.airdrops-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 25px 15px;
+    padding-right: 30px;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.item-logo{
+    width: 68px;
+    height: 68px;
+}
+.item-info{
+    max-width: 288px;
+    margin: 0 35px;
+}
+.airdrop .name{
+    font-size: 16px;
+}
+.airdrop .desc{
+    margin-top: 5px;
+    color: #7B7B7B;
+}
+.item-action .status{
+    position: relative;
+    top: 0;
+    right: 0;
+    background: unset;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+.item-action .status.completed{
+    color: #1EAB1E;
+}
+.item-action .status.not-started{
+    color: #073FC2;
+}
+.item-action .status::before{
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.item-action .status.completed::before{
+    background-color: #1EAB1E;
+}
+.item-action .status.not-started::before{
+    background-color: #073FC2;
+}
+.investround .investround-card{
+    max-width: 385px;
+}
+.main-stats,.main-elem{
+    display: inline-flex;
+    align-items: center;
+}
+.main-elem{
+    margin-right: 10px;
+    padding: 12px;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.main-elem p{
+    margin-right: 25px;
+}
+.participate-wrapper{
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.participate-title{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.participate-wrapper p{
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.become-member{
+    display: flex;
+    align-items: center;
+}
+.become-member p:first-child{
+    margin-right: 20px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: #1EAB1E;
+    color: #fff;
+    font-weight: 100;
+}
+.become-member p:last-child{
+    font-weight: inherit;
+}
+.participate-bth{
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.charts-container{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.charts-item{
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+.charts-item .participate-title{
+    text-align: left;
+}
+.charts-item:nth-child(1){
+    margin-right: 10px;
+    padding-bottom: 45px;
+}
+.charts-item:nth-child(1) .participate-title{
+    margin-bottom: 95px;
+}
+.item-wrapper .charts-item:nth-child(1) .participate-title:first-of-type{
+    margin-bottom: 25px;
+}
+.item-wrapper .charts-item:nth-child(1) .participate-title:last-of-type{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.item-wrapper .charts-item:nth-child(1){
+    margin-right: 0px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+.item-wrapper{
+    margin-right: 10px;
+}
+.last-item{
+    max-width: 390px;
+    padding: 65px 25px 55px 50px;
+}

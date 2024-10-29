@@ -7,6 +7,7 @@
     display: inline-flex;
 }
 .pagination-item{
+    display: inline-flex;
     padding: 6px 12px;
     border-radius: 10px;
     color: #334155;
@@ -17,4 +18,9 @@
 .active{
     background-color: #fff;
     color: #0F172A;
+}
+.pagination-item img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
 }
