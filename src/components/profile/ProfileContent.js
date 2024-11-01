@@ -31,13 +31,23 @@ const ProfileContent = ({content}) => {
 
     const [coursesState, setCoursesState] = useState(courses);
 
-    const handleCourseSubmit = (index) =>{
+    const handleCourseSubmit = (index, name) =>{
         setCoursesState(prevCourses => {
             const updateCourses = [...prevCourses];
             updateCourses[index].isStarted  = true;
             return updateCourses
         })
-        showToast('You have added to the project "Virtual Versions"');
+        showToast(`You have added to the course "${name}"`);
+    }
+    const [projectsState, setProjectsState] = useState(projects);
+
+    const handleProjectSubmit = (index, name) =>{
+        setProjectsState(prevProjects => {
+            const updateProjects = [...prevProjects];
+            updateProjects[index].isMember  = true;
+            return updateProjects
+        })
+        showToast(`You have added to the Crypto Project "${name}"`);
     }
 
     return (
@@ -94,7 +104,7 @@ const ProfileContent = ({content}) => {
                                 {course.isStarted ? (
                                     <Link to='/course' className='button-success' >Explore the course</Link>
                                 ):(
-                                    <button className='button-primary' onClick={()=>handleCourseSubmit(index)}>Submit an application</button>
+                                    <button className='button-primary' onClick={()=>handleCourseSubmit(index, course.name)}>Submit an application</button>
                                 )}
                                 
                             </div>
@@ -123,9 +133,13 @@ const ProfileContent = ({content}) => {
                                             <p>{`${project.isPublic ? 'Public' : 'Private'}`}</p>
                                         </div>
                                         {project.isMember ? (
-                                            <Link to={`/investor/${courseName}`}onClick={()=>dispatch(setActiveMenuItem('investor-project'))} className='button-success'>Member</Link> 
+                                            <div>
+                                                <Link to={`/investor/${courseName}`}
+                                            onClick={()=>dispatch(setActiveMenuItem('investor-project'))} className='button-success'>Member</Link> 
+                                            </div>
                                         ):(
-                                            <button className='button-primary'>Submit an application</button>
+                                            <button className='button-primary' onClick={()=>handleProjectSubmit(index, project.name)}>Submit an application</button>
+                                          
                                         )}
                                         
                                     </div>

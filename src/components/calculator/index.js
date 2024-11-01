@@ -3,7 +3,7 @@ import styles from './index.module.css';
 import SliderComponent from './SliderComponent';
 import CalculatorSelector from 'components/calculator-selector';
 
-const Calculator = () => {
+const Calculator = ({handleShowBars}) => {
     return(    
         <div className={`${styles['calculator-wrapper']}`}>
             <div className={`${styles['calculator-inner']}`}>
@@ -45,7 +45,7 @@ const Calculator = () => {
                         </label>
                     </div>
                     
-                    <button className={`button-primary`}>Result</button>
+                    <button className={`button-primary`} onClick={()=>handleShowBars(true)}>Result</button>
                 </div>
                 <div>
                     <div className={`${styles['calculator-item']}`}>

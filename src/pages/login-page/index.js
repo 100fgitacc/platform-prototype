@@ -12,7 +12,7 @@ const LoginPage = () => {
                     <div className='auth-logo'>
                         <img src='../assets/img/logo.png' alt='logo'/>
                     </div>
-                    <h1 className={`${styles.title} main-title`}>Where do <span>we start?</span></h1>
+                    <h1 className={`${styles.title} main-title`}>LOG IN<span> TO START</span></h1>
                     <div className={styles.image}>
                         <img src='../assets/img/franklin3.png' alt='franklin image'/>
                     </div>
@@ -24,7 +24,7 @@ const LoginPage = () => {
                     <div className={styles.content}>
                         <div className={`${styles.card} auth-card `}>
                             <div className={styles.desc}>
-                                <p>Download the project</p>
+                                <p>Enter as founder</p>
                                 <Link to="/project">
                                     <button className='auth-btn'>Log In</button>
                                 </Link>
@@ -35,7 +35,7 @@ const LoginPage = () => {
                         </div>
                         <div className={`${styles.card} auth-card `}>
                             <div className={styles.desc}>
-                                <p>Become an investor</p>
+                                <p>Enter as investor</p>
                                 <Link to="/investor">
                                     <button className='auth-btn'>Log In</button>
                                 </Link>

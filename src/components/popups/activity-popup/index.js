@@ -37,7 +37,7 @@ const ActivityPopup = () => {
                         </div>
                         <div>
                             <label className={`${styles['input-wrapper']}`}>
-                                Paste the link to the event on Layer3 Quiz
+                                Paste the link to the event on Layer3
                                 <input type='text' placeholder='https://'/> 
                             </label>
                             <div className={`${styles['input-wrapper']} checkbox-container`}>
@@ -63,8 +63,8 @@ const ActivityPopup = () => {
                                 <input type='text' placeholder='0 USDT'/> 
                             </label>
                             <label className={`${styles['input-wrapper']}`}>
-                                Total Allocation ($SG)
-                                <input type='text' placeholder='0 SG'/> 
+                                Total Allocation (TOKEN)
+                                <input type='text' placeholder='TOKEN'/> 
                             </label>
                         </div>
                         <div>

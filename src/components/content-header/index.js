@@ -113,7 +113,7 @@ const ContentHeader = ({ page, content }) => {
                             </div>
                             <div className={styles.desc}>
                                 <div>
-                                    <h2 className={`${styles.title} secondary-title`}>SolarGrid</h2>
+                                    <h2 className={`${styles.title} secondary-title`}>Crypto Project</h2>
                                     <div className={styles.socials}>
                                         <a href='https://100f.com/' target='_blank'>
                                             <img src='../assets/img/icons/ant-design_youtube-filled.png' alt='youtube icon'/>
@@ -137,7 +137,7 @@ const ContentHeader = ({ page, content }) => {
                                     <div className={styles['sub-info']}>
                                         <p className={styles.activity}>Public | Active 2 weeks ago</p>
                                         <p className={styles.text}>
-                                        SolarGrid is a cutting-edge cryptocurrency project focused on integrating solar energy solutions with blockchain technology. It aims to create a decentralized platform that optimizes energy distribution and promotes sustainability through clean energy innovations
+                                        Crypto Project is a cutting-edge cryptocurrency project focused on integrating solar energy solutions with blockchain technology. It aims to create a decentralized platform that optimizes energy distribution and promotes sustainability through clean energy innovations
                                         </p>
                                     </div>
                                 

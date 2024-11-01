@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './index.module.css'
 import ProgressBar from 'components/progress-bar';
-import { feeds } from 'database/investor/profile';
+import { feeds } from 'database/investor/projects';
 import FeedUi from 'components/feed-ui';
 import DoughnutChart from 'components/data-visualization-ui/DoughnutChart';
 import LineChart from 'components/data-visualization-ui/LineChart';
@@ -10,8 +10,7 @@ import ProgressChart from 'components/data-visualization-ui/ProgressChart';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import PostPopup from 'components/popups/post-create-popup';
-import { useDispatch } from 'react-redux';
-import {setActiveMenuItem } from '../../store';
+import { passport } from "database/project/charts";
 import { useParams } from 'react-router-dom';
 
 const MySwal = withReactContent(Swal);
@@ -44,7 +43,7 @@ const FeedContent = ({content, changeContent}) => {
         <div className={styles['content-container']}>
             { content === 'Feed' && !name ? (
                 <div className={styles['feed-content-wrapper']}>
-                    <h2 className={`${styles.title} secondary-title`}>Current activity project</h2>
+                    <h2 className={`${styles.title} secondary-title`}>Current activity</h2>
                     <div className={styles['cards-container']}>
                         <div className={`${styles['feed-card']} ${styles['airdrop-card']}`} onClick={()=>changeContent('Manage')}>
                             <div className={styles['card-info']}>
@@ -100,7 +99,7 @@ const FeedContent = ({content, changeContent}) => {
             ) :
             content === 'Feed' && name ? (
                 <div className={styles['feed-content-wrapper']}>
-                    <h2 className={`${styles.title} secondary-title`}>Current activity SolarGrid</h2>
+                    <h2 className={`${styles.title} secondary-title`}>Current activity</h2>
                     <div className={styles['cards-container']}>
                         <div className={`${styles['feed-card']} ${styles['airdrop-card']}`} onClick={()=>changeContent('Airdrop')}>
                             <div className={styles['card-info']}>
@@ -149,7 +148,7 @@ const FeedContent = ({content, changeContent}) => {
                             </div>
                         </div>
                     </div>
-                    <button className={`button-primary ${styles['create-post-btn']}`} onClick={handleCreatePost}>Create post</button>
+                    {/* <button className={`button-primary ${styles['create-post-btn']}`} onClick={handleCreatePost}>Create post</button> */}
                     <FeedUi feeds={feeds}/>
                 </div>
 
@@ -206,7 +205,7 @@ const FeedContent = ({content, changeContent}) => {
                             </div>
                             <div className={styles['item-info']}>
                                 <strong className={styles['name']}>
-                                    Complete Layer3 Quiz
+                                    Complete Layer3
                                 </strong>
                                 <p className={styles['desc']}>
                                     Complete the quiz and mint the cube NFT to earn the Layer3 badge!
@@ -274,7 +273,7 @@ const FeedContent = ({content, changeContent}) => {
                             </div>  
                        </div>
                        <div className={styles['participate-wrapper']}>
-                            <h3 className={`${styles['participate-title']} third-title`}>Participate in VV Round</h3>
+                            <h3 className={`${styles['participate-title']} third-title`}>Participate in CP Round</h3>
                             <p>Allocation</p>
                             <ProgressBar progress={45} total={'3,454'} context={'green'}/>
                             <div className={styles['become-member']}>
@@ -342,7 +341,7 @@ const FeedContent = ({content, changeContent}) => {
                             </div>
                         </div>
                         <div className={`${styles['charts-item']} ${styles['last-item']}`}>
-                            <BarChart/>
+                            <BarChart data={passport}/>
                         </div>
                     </div>
                 </div>

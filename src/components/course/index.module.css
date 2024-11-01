@@ -102,6 +102,7 @@
 .player{
     border-radius: 15px;
     overflow: hidden;
+    height: 500px;
 }
 
 .single-course .overview-inner:last-child{

@@ -16,14 +16,14 @@ const DiscussionContent = ({content}) => {
                 <img src={'../assets/img/project.png'} alt='project-avatar'/>
                 <div>
                     <p className={styles.topic}>Start invetsrounds</p>
-                    <p className={styles.desc}>SolarGrid replied 11 months, 1 week ago</p>
+                    <p className={styles.desc}>Crypto Project replied 11 months, 1 week ago</p>
                 </div>
             </div>
             <div className={styles.item}>
                 <img src={'../assets/img/project.png'} alt='project-avatar'/>
                 <div>
                     <p className={styles.topic}>Next Airdrop</p>
-                    <p className={styles.desc}>SolarGrid replied 11 months, 1 week ago</p>
+                    <p className={styles.desc}>Crypto Project replied 11 months, 1 week ago</p>
                 </div>
             </div>
         </div>

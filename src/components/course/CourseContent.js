@@ -22,14 +22,20 @@ const CourseContent = ({content, data}) => {
         }
     }, [player, content]);
     
+    const youtubeUrl = "https://www.youtube.com/embed/IyIS2XLjzJg";
 
     return (
         <div className={styles['content-container']}>
             {
             content === 'Lesson' ? (
-                <div className={styles.player}>
-                    <div ref={playerRef}></div>
-                </div>
+                <iframe
+                className={styles.player}
+                src={youtubeUrl}
+                title="YouTube Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen 
+            ></iframe>
             ) : (
                <>
                  { data && data.length > 0 && (

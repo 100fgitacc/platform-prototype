@@ -28,7 +28,7 @@ const SliderComponent = () => {
             }}
             railStyle={{ backgroundColor: '#e9e9e9', height: 8 }}
         />
-        <div style={{ textAlign: 'center', marginTop: 5, color: '#000000' }}>{value}</div>
+        <div style={{ textAlign: 'center', marginTop: 5, color: '#000000' }}>{value} weeks</div>
       </div>
     );
 };

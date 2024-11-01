@@ -23,7 +23,7 @@ const PostPopup = ({feeds}) => {
                 <div className={styles['popup-item']}>
                     <img src={'../assets/img/project.png'} alt='project-avatar'/>
                     <div>
-                        <p className={styles.author}>SolarGrid</p>
+                        <p className={styles.author}>Crypto Project</p>
                         <MembersSelector/>
                     </div>
                 </div>

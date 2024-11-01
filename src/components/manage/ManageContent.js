@@ -9,6 +9,7 @@ import Calculator from 'components/calculator';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import ActivityPopup from 'components/popups/activity-popup';
+import { passport, times, times1, invested, wallet, completed, airdrop } from "database/project/charts";
 const MySwal = withReactContent(Swal);
 
 const ManageContent = ({content}) => {
@@ -111,7 +112,7 @@ const ManageContent = ({content}) => {
                                 <h2 className={`${styles['participate-title']} secondary-title`}>Registration times</h2>
                                 <p>345</p>
                             </div>
-                                <BarChart/>
+                                <BarChart data={times}/>
                             </>
                         ):subOption === 'Wallet' ? (
                             <> 
@@ -119,7 +120,7 @@ const ManageContent = ({content}) => {
                                 <h2 className={`${styles['participate-title']} secondary-title`}>Wallet</h2>
                                 <p>345</p>
                             </div>
-                                <BarChart/>
+                                <BarChart data={wallet}/>
                             </>
                         ):subOption === 'Passport' ? (
                             <> 
@@ -127,7 +128,7 @@ const ManageContent = ({content}) => {
                                 <h2 className={`${styles['participate-title']} secondary-title`}>Gitcoin Passport</h2>
                                 <p>345</p>
                             </div>
-                                <BarChart/>
+                                <BarChart data={passport}/>
                             </>
                         ):subOption === 'KYC' ? (
                             <> 
@@ -146,7 +147,7 @@ const ManageContent = ({content}) => {
                                 <h2 className={`${styles['participate-title']} secondary-title`}>Invested projects</h2>
                                 <p>345</p>
                             </div>
-                                <BarChart/>
+                                <BarChart data={invested}/>
                             </>
                         ):subOption === 'Completed' ? (
                             <> 
@@ -154,7 +155,7 @@ const ManageContent = ({content}) => {
                                 <h2 className={`${styles['participate-title']} secondary-title`}>Completed projects</h2>
                                 <p>345</p>
                             </div>
-                                <BarChart/>
+                                <BarChart data={completed}/>
                             </>
                         ):subOption === 'Airdrop' ? (
                             <> 
@@ -162,7 +163,7 @@ const ManageContent = ({content}) => {
                                 <h2 className={`${styles['participate-title']} secondary-title`}>Airdrop points</h2>
                                 <p>345</p>
                             </div>
-                                <BarChart/>
+                                <BarChart data={airdrop}/>
                             </>
                         ):null
                        }
@@ -189,7 +190,13 @@ const ManageContent = ({content}) => {
         });
     }
 
+    const [showBars, setShowBars] = useState(false);
 
+    const handleShowBars = (e) => {
+        setShowBars(e);
+    }
+    console.log(showBars);
+    
     return (
         <div className={styles['content-container']}>
             {
@@ -198,7 +205,7 @@ const ManageContent = ({content}) => {
                     <div className={`${styles['content-wrapper']} ${styles.details}`}>
                         <div className={styles['content-elem']}>
                             <p>Project name</p> 
-                            <input type='text' placeholder='|SolarGrid'/> 
+                            <input type='text' placeholder='Crypto Project'/> 
                         </div>     
                         <div className={styles['content-elem']}>
                             <p>Project description</p>  
@@ -507,7 +514,7 @@ const ManageContent = ({content}) => {
                         </div>
                         <div className={`${styles['charts-item']} ${styles['last-item']}`}>
                         <h3 className={`${styles['participate-title']} third-title`}>Project points</h3>
-                            <BarChart/>
+                            <BarChart data={times1}/>
                         </div>
                     </div>
                 </>
@@ -515,12 +522,16 @@ const ManageContent = ({content}) => {
                 <>
                     <div className={`${styles['content-wrapper']} ${styles.audience}`}>
                         <h3 className={`${styles['participate-title']} third-title`}>Audience calculator</h3>
-                        <Calculator/>
+                        <Calculator handleShowBars={handleShowBars}/>
                     </div>
-                    <PagePagination context={`audience-options`} options={options} renderOptionsContent={handleSetOptions}/>
-                    {renderSubPage()}
-                    
-                    <button className={`button-primary ${styles['activity-btn']}`} onClick={handleSelectActivity}>New activity</button>
+                    {showBars && (
+                        <>
+                            <PagePagination context={`audience-options`} options={options} renderOptionsContent={handleSetOptions}/>
+                            {renderSubPage()}
+                            
+                            <button className={`button-primary ${styles['activity-btn']}`} onClick={handleSelectActivity}>New activity</button>
+                        </>
+                    )}
                 </>
             ) : null
             }
