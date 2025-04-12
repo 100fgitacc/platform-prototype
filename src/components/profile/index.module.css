@@ -28,7 +28,21 @@
 .about-item p:first-child{
     color: #7B7B7B;
 }
-
+.projects-image,.courses-image{
+    position: relative
+}
+.projects-image span,
+.courses-image span{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: 1px solid #1858F3;
+    text-transform: uppercase;
+    background: #F1F5F9;
+    font-size: 13px;
+}
 .courses-wrapper,
 .projects-wrapper{
     display: inline-flex;

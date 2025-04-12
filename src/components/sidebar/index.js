@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './index.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -22,6 +22,7 @@ const Sidebar = ({renderPage, profileType, currPage}) => {
     }
     
     const handleExit = () => {
+        localStorage.removeItem('auth');
         navigate('/');
     }
   
@@ -67,7 +68,7 @@ const Sidebar = ({renderPage, profileType, currPage}) => {
                             <>
                                 {/* <Link to='/' > */}
                                 <div className={`${styles.logo} main-logo`}> 
-                                    <img  src='../assets/img/logo.png' alt='logo'/>
+                                    <img  src='../assets/img/logo-new-2.png' alt='logo'/>
                                 </div>
                                 {/* </Link> */}
                                 <button className={styles['sidebar-button-close']} onClick={handleToggleSidebar}><img src='../assets/img/icons/chevron-right.png' alt='logo'/></button>
@@ -131,7 +132,7 @@ const Sidebar = ({renderPage, profileType, currPage}) => {
                         <>
                             {/* <Link to='/' > */}
                             <div className={`${styles.logo} main-logo`}> 
-                                <img  src='../assets/img/logo.png' alt='logo'/>
+                                <img  src='../assets/img/logo-new-2.png' alt='logo'/>
                             </div>
                             {/* </Link> */}
                             <button className={styles['sidebar-button-close']} onClick={handleToggleSidebar}><img src='../assets/img/icons/chevron-right.png' alt='logo'/></button>

@@ -4,45 +4,51 @@ const courses = [
         desc: 'A fundamental course on cryptocurrencies for beginners',
         progress: 0,
         isStarted:false,
-        img:'courses1'
+        img:'courses1',
+        difficult:'Low'
     }, 
     {
         name: 'Crypto Arbitrage',
         desc: 'Basics of earning through P2P trading',
         progress: 20,
         isStarted:true,
-        img:'courses2'
+        img:'courses2',
+        difficult:'Medium'
     }, 
     {
         name: 'Trading Basics',
         desc: 'Fundamental trading skills training',
         progress: 75,
         isStarted:true,
-        img:'courses3'
+        img:'courses3',
+        difficult:'Hard'
     }
     
 ]
 const projects = [
     {
-        name: 'Crypto Project1',
+        name: 'Crypto Project 1',
         active: null    ,
         isPublic: false,
         isMember:false,
-        img:'projects1'
+        img:'projects1',
+        type:'Airdrop'
     }, 
     {
-        name: 'Crypto Project2',
+        name: 'Crypto Project 2',
         active: 3,
         isPublic: false,
         isMember:true,
-        img:'projects2'
+        img:'projects2',
+        type:'Airdrop & IDO'
     }, 
     {
-        name: 'Crypto Project3',
+        name: 'Crypto Project 3',
         active: 2,
         isPublic: false,
         isMember:true,
-        img:'projects3'
+        img:'projects3',
+        type:'IDO'
     }
 ]
 const feeds = [

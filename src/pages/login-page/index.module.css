@@ -1,19 +1,18 @@
 .title{
     font-family: 'Wadik', sans-serif;
     text-transform: uppercase;
-    max-width: 262px;
-    margin-top: 100px;
+    margin-top: 235px;
     margin-bottom: 30px;
+    font-size: 45px;
 }
 .image{
     width: 285px;
     height: 309px;
 }
 .left-side .inner{
-    margin-top: 35px;
+    margin-top: 60px;
     margin-right: 35px;
     margin-left: 135px;
-    max-width: 285px;
 }
 .right-side .inner{
     margin-top: 35px;
@@ -33,10 +32,11 @@
     max-width: 442px;
     margin: 0 auto; 
     padding: 20px;
+    padding-right: 50px;
     padding-bottom: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 .card:first-child{
     margin-bottom: 10px;
@@ -53,6 +53,6 @@
     font-weight: 300;
 }
 .card .image{
-    width: 150px;
-    height: 130px;
+    width: 63px;
+    height: 63px;
 }

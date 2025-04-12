@@ -85,12 +85,12 @@ button, input, optgroup, select, textarea {
   color: #fff;
 }
 .main-title span{
-  color: #76FFF4;
+  color: #A273FF;
 }
 
 .auth-logo{
-  width: 190px;
-  height: 36px;
+  width: 252px;
+  height: 44px;
 }
 .main-logo{
   width: 169px;
@@ -460,4 +460,9 @@ label{
 /* При наведении мыши на ползунок */
 ::-webkit-scrollbar-thumb:hover {
   background: #101f7e; 
+}
+.swal2-input{
+  max-width: 250px;
+  margin: 0px auto;
+  margin-bottom: 10px;
 }

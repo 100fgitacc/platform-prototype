@@ -89,6 +89,7 @@ const ProfileContent = ({content}) => {
                         courses.map((course, index) => (
                         <div className={styles['courses-item']} key={index}>
                             <div className={styles['courses-image']}>
+                                <span>{course.difficult}</span>
                                 <img src={`../assets/img/${course.img}.png`} alt={course.name}/>
                             </div>
                             <div className={styles['courses-content']}>
@@ -122,6 +123,7 @@ const ProfileContent = ({content}) => {
                             return(
                                 <div className={styles['projects-item']} key={index}>
                                     <div className={styles['projects-image']}>
+                                        <span>{project.type}</span>
                                         <img src={`../assets/img/${project.img}.png`} alt={project.name}/>
                                     </div>
                                     <div className={styles['projects-content']}>

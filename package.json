@@ -22,7 +22,7 @@
     "react-toastify": "^10.0.6",
     "react-transition-group": "^4.4.5",
     "redux": "^5.0.1",
-    "sweetalert2": "^11.14.3",
+    "sweetalert2": "^11.15.10",
     "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
   },

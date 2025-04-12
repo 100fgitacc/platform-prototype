@@ -6,8 +6,9 @@ import InvestorPageProject from './pages/investor-page-project';
 import ProjectPage from './pages/project-page';
 import CoursePage from './pages/course-page';
 import NotFoundPage from './components/profile';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './privateRoute';
 
 const App = () => {
   return (
@@ -16,10 +17,14 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/investor/:name" element={<InvestorPageProject/>} />
-          <Route path="/investor" element={<InvestorPage />} />
-          <Route path="/project" element={<ProjectPage />} />
-          <Route path="/course" element={<CoursePage />} />
+
+          <Route element={<PrivateRoute />}>
+            <Route path="/investor/:name" element={<InvestorPageProject />} />
+            <Route path="/investor" element={<InvestorPage />} />
+            <Route path="/project" element={<ProjectPage />} />
+            <Route path="/course" element={<CoursePage />} />
+          </Route>
+
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>

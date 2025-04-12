@@ -6,7 +6,7 @@ const AuthFooter = () => {
     return(
         <footer className='auth-footer'>
           <Link to='/privacy' className={styles.terms}>Terms of Service and Privacy Policy</Link>
-          <p className={styles.copyright}>© 2024 - 100franklins.com</p>
+          <p className={styles.copyright}>© 2025- eternex.com</p>
         </footer>
     );
 }
